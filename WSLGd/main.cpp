@@ -325,7 +325,6 @@ try {
 
     std::string rdpClientExePath = c_mstscFullPath;
     if (isWslInstallPathEnvPresent) {
-        struct stat buffer;
         std::string msrdcExePath = TranslateWindowsPath(wslInstallPath.c_str());
         msrdcExePath += "/" MSRDC_EXE;
         if (access(msrdcExePath.c_str(), X_OK)) == 0) {
